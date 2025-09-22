@@ -1,6 +1,7 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
+import ConfigEditor from "@/components/ConfigEditor";
 
 const Index = () => {
   return (
@@ -140,54 +141,14 @@ const Index = () => {
       {/* Configuration Section */}
       <section className="py-20 px-6">
         <div className="container mx-auto">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-4xl md:text-6xl font-bold mb-6">НАСТРОЙКА<br />СЕРВЕРА</h2>
-              <p className="text-lg text-muted-foreground mb-8">
-                Конфигурируйте все аспекты вашего Rust сервера через простой в использовании интерфейс. 
-                От базовых настроек до продвинутых параметров игрового процесса.
-              </p>
-              <div className="space-y-4">
-                <div className="flex items-center">
-                  <Icon name="Wrench" className="text-primary mr-3" size={20} />
-                  <span>Конфигурационные файлы JSON</span>
-                </div>
-                <div className="flex items-center">
-                  <Icon name="Database" className="text-primary mr-3" size={20} />
-                  <span>Управление базой данных</span>
-                </div>
-                <div className="flex items-center">
-                  <Icon name="Shield" className="text-primary mr-3" size={20} />
-                  <span>Система прав и ролей</span>
-                </div>
-              </div>
-            </div>
-            <Card className="bg-card border-border">
-              <CardHeader>
-                <CardTitle className="text-xl flex items-center">
-                  <Icon name="FileCode" className="text-primary mr-2" size={24} />
-                  config.json
-                </CardTitle>
-              </CardHeader>
-              <CardContent>
-                <pre className="bg-background p-4 rounded-md text-sm overflow-x-auto">
-                  <code className="text-muted-foreground">
-{`{
-  "ServerName": "Мой Rust Сервер",
-  "MaxPlayers": 100,
-  "WorldSize": 3000,
-  "PVP": true,
-  "Plugins": {
-    "Economics": true,
-    "Clans": true,
-    "AdminTools": true
-  }
-}`}
-                  </code>
-                </pre>
-              </CardContent>
-            </Card>
+          <div className="text-center mb-16">
+            <h2 className="text-4xl md:text-6xl font-bold mb-6">ИНТЕРАКТИВНЫЙ<br />КОНФИГУРАТОР</h2>
+            <p className="text-lg text-muted-foreground max-w-3xl mx-auto">
+              Настройте сервер Rust в реальном времени. Измените параметры слева и сразу увидьте результат в JSON справа.
+              Скопируйте готовую конфигурацию одним кликом!
+            </p>
           </div>
+          <ConfigEditor />
         </div>
       </section>
 
