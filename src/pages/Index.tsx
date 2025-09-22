@@ -2,6 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import Icon from "@/components/ui/icon";
 import ConfigEditor from "@/components/ConfigEditor";
+import PluginTabs from "@/components/PluginTabs";
 
 const Index = () => {
   return (
@@ -54,88 +55,7 @@ const Index = () => {
 
       {/* Features Section */}
       <section id="plugins" className="py-20 px-6 bg-card">
-        <div className="container mx-auto">
-          <h2 className="text-4xl md:text-6xl font-bold text-center mb-16">ВОЗМОЖНОСТИ</h2>
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="bg-background border-border hover:border-primary transition-colors animate-scale-in">
-              <CardHeader>
-                <Icon name="Settings" className="text-primary mb-4" size={48} />
-                <CardTitle className="text-2xl">КОНФИГУРАЦИЯ</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  Полная настройка параметров сервера через удобный интерфейс
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Настройка спавна предметов
-                  </li>
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Управление PvP зонами
-                  </li>
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Кастомные события
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-border hover:border-primary transition-colors animate-scale-in">
-              <CardHeader>
-                <Icon name="Server" className="text-primary mb-4" size={48} />
-                <CardTitle className="text-2xl">УПРАВЛЕНИЕ</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  Мониторинг и администрирование сервера в реальном времени
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Статистика игроков
-                  </li>
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Банов и кики
-                  </li>
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Логирование действий
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-
-            <Card className="bg-background border-border hover:border-primary transition-colors animate-scale-in">
-              <CardHeader>
-                <Icon name="Puzzle" className="text-primary mb-4" size={48} />
-                <CardTitle className="text-2xl">ПЛАГИНЫ</CardTitle>
-                <CardDescription className="text-muted-foreground">
-                  Расширенный функционал для уникального игрового опыта
-                </CardDescription>
-              </CardHeader>
-              <CardContent>
-                <ul className="space-y-2 text-sm text-muted-foreground">
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Экономическая система
-                  </li>
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Кланы и группы
-                  </li>
-                  <li className="flex items-center">
-                    <Icon name="Check" size={16} className="text-primary mr-2" />
-                    Кастомные команды
-                  </li>
-                </ul>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
+        <PluginTabs />
       </section>
 
       {/* Configuration Section */}
